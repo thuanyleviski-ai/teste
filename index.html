@@ -16,17 +16,17 @@
 }
 
 body{
-    background:linear-gradient(#fff9c4,#fffde7);
+    background:linear-gradient(180deg,#fff9c4,#fffde7);
     color:#333;
 }
 
 /* Cabeçalho */
 
 header{
-    background:linear-gradient(45deg,#f4b400,#ff9800);
+    background:linear-gradient(45deg,#F4B400,#FF9800);
     color:white;
     text-align:center;
-    padding:45px 20px;
+    padding:50px 20px;
     box-shadow:0 5px 15px rgba(0,0,0,.2);
 }
 
@@ -35,22 +35,22 @@ header h1{
 }
 
 header p{
-    font-size:20px;
     margin-top:10px;
+    font-size:20px;
 }
 
 /* Menu */
 
 nav{
     background:#222;
-    text-align:center;
     padding:15px;
+    text-align:center;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:15px;
+    margin:0 18px;
     font-weight:bold;
     transition:.3s;
 }
@@ -63,44 +63,47 @@ nav a:hover{
 
 main{
     width:90%;
-    max-width:1000px;
-    margin:30px auto;
+    max-width:1100px;
+    margin:40px auto;
 }
 
 article{
     background:white;
     border-radius:20px;
     overflow:hidden;
-    box-shadow:0 8px 20px rgba(0,0,0,.2);
-    padding-bottom:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
 /* Imagens */
 
-article img{
+.imagem{
+    overflow:hidden;
+}
+
+.imagem img{
     width:100%;
     height:420px;
     object-fit:cover;
     display:block;
-    transition:.4s;
+    transition:.5s;
 }
 
-article img:hover{
-    transform:scale(1.03);
+.imagem img:hover{
+    transform:scale(1.05);
 }
 
-/* Textos */
+/* Texto */
 
 h2{
-    color:#d68900;
+    color:#c97c00;
     margin:25px;
 }
 
 p{
-    margin:25px;
+    margin:0 25px 25px;
     line-height:1.8;
-    font-size:18px;
     text-align:justify;
+    font-size:18px;
 }
 
 /* Botões */
@@ -109,12 +112,13 @@ p{
     display:flex;
     justify-content:center;
     gap:20px;
-    margin-top:20px;
+    margin:30px;
+    flex-wrap:wrap;
 }
 
 button{
     border:none;
-    padding:15px 25px;
+    padding:15px 30px;
     border-radius:10px;
     font-size:18px;
     cursor:pointer;
@@ -127,6 +131,7 @@ button{
 
 #curtir:hover{
     background:#FFC107;
+    transform:translateY(-3px);
 }
 
 #republicar{
@@ -135,18 +140,19 @@ button{
 }
 
 #republicar:hover{
-    background:#388E3C;
+    background:#2E7D32;
+    transform:translateY(-3px);
 }
 
-/* Saiba mais */
+/* Botão Saiba Mais */
 
 .saiba{
     display:block;
-    width:fit-content;
-    margin:30px auto;
-    text-decoration:none;
+    width:max-content;
+    margin:20px auto 40px;
     background:#2196F3;
     color:white;
+    text-decoration:none;
     padding:15px 25px;
     border-radius:10px;
     transition:.3s;
@@ -159,11 +165,11 @@ button{
 /* Rodapé */
 
 footer{
-    margin-top:40px;
     background:#222;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
+    margin-top:40px;
 }
 
 /* Responsivo */
@@ -174,17 +180,16 @@ header h1{
     font-size:34px;
 }
 
-article img{
+.imagem img{
     height:250px;
 }
 
 .acoes{
     flex-direction:column;
-    align-items:center;
 }
 
 button{
-    width:80%;
+    width:100%;
 }
 
 }
@@ -199,7 +204,7 @@ button{
 
 <h1>🐝 Blog das Abelhas</h1>
 
-<p>Descubra curiosidades incríveis sobre as abelhas e sua importância para o planeta.</p>
+<p>Conheça a importância das abelhas para a natureza e para a produção de alimentos.</p>
 
 </header>
 
@@ -217,26 +222,43 @@ button{
 
 <article>
 
-<img src=<img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=80" alt="Abelha em flor">
+<div class="imagem">
+<img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=1200&q=80"
+alt="Abelha coletando néctar em uma flor">
+</div>
+
 <h2>🌼 A importância das abelhas</h2>
 
 <p>
-As abelhas são responsáveis pela polinização de milhares de plantas e culturas agrícolas. Sem elas, boa parte dos alimentos que consumimos desapareceria. Elas garantem o equilíbrio dos ecossistemas e ajudam na preservação da biodiversidade.
+As abelhas são fundamentais para a polinização de milhares de espécies de plantas.
+Graças ao seu trabalho, grande parte dos alimentos consumidos no mundo é produzida.
+Além disso, elas ajudam a preservar a biodiversidade e o equilíbrio dos ecossistemas.
 </p>
 
-<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80" alt="Colmeia">
+<div class="imagem">
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80"
+alt="Colmeia de abelhas">
+</div>
 
 <h2>🍯 Como vivem?</h2>
 
 <p>
-Cada colmeia possui uma organização impressionante. A rainha coloca os ovos, as operárias trabalham na coleta de néctar, produção de mel e proteção da colmeia, enquanto os zangões têm a função de fecundar a rainha.
+As colmeias possuem uma organização extraordinária. Cada abelha desempenha uma função:
+a rainha coloca os ovos, as operárias coletam néctar, produzem mel e defendem a colmeia,
+enquanto os zangões são responsáveis pela fecundação da rainha.
 </p>
 
-<img src=<img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=80" alt="Abelha em flor">
+<div class="imagem">
+<img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=1200&q=80"
+alt="Abelha sobre uma flor">
+</div>
+
 <h2>🌻 Como ajudar?</h2>
 
 <p>
-Você pode plantar flores, preservar áreas verdes, evitar pesticidas e apoiar produtores sustentáveis. Pequenas atitudes fazem uma enorme diferença para proteger esses importantes polinizadores.
+Você pode plantar flores ricas em néctar, preservar áreas verdes, evitar o uso de pesticidas
+e incentivar a produção sustentável de mel. Pequenas ações fazem grande diferença para proteger
+esses importantes polinizadores.
 </p>
 
 <div class="acoes">
@@ -251,7 +273,9 @@ Você pode plantar flores, preservar áreas verdes, evitar pesticidas e apoiar p
 
 </div>
 
-<a class="saiba" href="https://pt.wikipedia.org/wiki/Abelha" target="_blank">
+<a class="saiba"
+href="https://pt.wikipedia.org/wiki/Abelha"
+target="_blank">
 📚 Saiba mais sobre as abelhas
 </a>
 
@@ -270,21 +294,19 @@ Você pode plantar flores, preservar áreas verdes, evitar pesticidas e apoiar p
 let likes = 0;
 let compartilhamentos = 0;
 
-document.getElementById("curtir").onclick = function(){
+const btnCurtir = document.getElementById("curtir");
+const btnCompartilhar = document.getElementById("republicar");
 
-likes++;
-document.getElementById("likes").innerHTML = likes;
+btnCurtir.addEventListener("click", () => {
+    likes++;
+    document.getElementById("likes").textContent = likes;
+});
 
-}
-
-document.getElementById("republicar").onclick = function(){
-
-compartilhamentos++;
-document.getElementById("shares").innerHTML = compartilhamentos;
-
-alert("🐝 Obrigado por compartilhar o Blog das Abelhas!");
-
-}
+btnCompartilhar.addEventListener("click", () => {
+    compartilhamentos++;
+    document.getElementById("shares").textContent = compartilhamentos;
+    alert("🐝 Obrigado por compartilhar o Blog das Abelhas!");
+});
 
 </script>
 
