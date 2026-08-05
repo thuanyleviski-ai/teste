@@ -54,6 +54,7 @@
             border-radius:12px;
             overflow:hidden;
             box-shadow:0 4px 10px rgba(0,0,0,.15);
+            margin-bottom: 30px;
         }
 
         article img{
@@ -68,7 +69,7 @@
         }
 
         article p{
-            margin:0 20px 20px 20px;
+            margin:0 20px 15px 20px;
             text-align:justify;
             line-height:1.8;
         }
@@ -103,30 +104,30 @@
             font-weight: bold;
         }
 
-        #curtir{
+        .btn-curtir{
             background:#ffd54f;
             color: #333;
         }
 
-        #curtir:hover{
+        .btn-curtir:hover{
             background:#ffca28;
         }
 
-        #republicar{
+        .btn-republicar{
             background:#4caf50;
             color:white;
         }
 
-        #republicar:hover{
+        .btn-republicar:hover{
             background:#43a047;
         }
 
-        #compartilhar{
+        .btn-compartilhar{
             background:#2196f3;
             color:white;
         }
 
-        #compartilhar:hover{
+        .btn-compartilhar:hover{
             background:#1e88e5;
         }
 
@@ -161,15 +162,40 @@
 <main>
 
 <article>
+    <!-- Imagem 1 -->
+    <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=900&q=80" alt="Abelha polinizando uma flor">
 
-    <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=900&q=80" alt="Abelha polinizando uma flor amarela">
-
-    <h2>A importância das abelhas</h2>
+    <h2>1. O Papel da Polinização no Ecossistema</h2>
 
     <p>
-        As abelhas são fundamentais para a natureza. Elas realizam a polinização de
-        milhares de plantas, ajudando na produção de alimentos e mantendo o equilíbrio
-        dos ecossistemas. Sem elas, diversas espécies vegetais poderiam desaparecer.
+        As abelhas são consideradas os polinizadores mais importantes do planeta. Ao visitarem as flores em busca de néctar para alimentar suas colmeias, elas transportam grãos de pólen de uma flor para outra. Esse processo simples possibilita a fertilização das plantas e o surgimento de frutos e sementes.
+    </p>
+    <p>
+        Cerca de 75% dos alimentos consumidos pelos seres humanos dependem, em algum grau, da polinização. Frutas como maçã, morango, melancia e vegetais como tomate e pimentão necessitam da ação direta desses insetos para se desenvolverem com qualidade.
+    </p>
+
+    <!-- Imagem 2 -->
+    <img src="https://images.unsplash.com/photo-1587049352847-4a222e784d38?auto=format&fit=crop&w=900&q=80" alt="Favos de mel na colmeia">
+
+    <h2>2. A Estrutura Social da Colmeia</h2>
+
+    <p>
+        A organização social das abelhas é um dos sistemas mais fascinantes da natureza. Uma única colmeia pode abrigar de 20 mil a 80 mil abelhas, divididas em três castas principais: a Rainha, as Operárias e os Zangões.
+    </p>
+    <p>
+        A abelha-rainha é responsável por pôr milhares de ovos por dia e garantir a continuidade da colmeia. As operárias realizam todo o trabalho pesado: coletam néctar, produzem mel, constroem os favos de cera e protegem o ninho. Já os zangões têm como função primária a reprodução com novas rainhas.
+    </p>
+
+    <!-- Imagem 3 -->
+    <img src="https://images.unsplash.com/photo-1473081556163-2a17de81fc97?auto=format&fit=crop&w=900&q=80" alt="Abelha pousada em uma folha verde">
+
+    <h2>3. A Importância da Preservação das Abelhas</h2>
+
+    <p>
+        Nas últimas décadas, populações de abelhas em todo o mundo vêm enfrentando quedas expressivas. Fatores como o uso excessivo de pesticidas agrícolas, a perda de habitat natural devido ao desmatamento e as mudanças climáticas colocam em risco a sobrevivência de diversas espécies.
+    </p>
+    <p>
+        Proteger as abelhas significa proteger a biodiversidade global e garantir a segurança alimentar das futuras gerações. Atitudes simples, como o plantio de flores em jardins urbanos e a redução do uso de produtos químicos, ajudam a criar ambientes mais seguros para esses polinizadores.
     </p>
 
     <a href="https://pt.wikipedia.org/wiki/Abelha" target="_blank" class="btn-wikipedia">
@@ -177,15 +203,15 @@
     </a>
 
     <div class="acoes">
-        <button id="curtir">
+        <button class="btn-curtir" onclick="curtir()">
             ❤️ Curtir (<span id="likes">0</span>)
         </button>
 
-        <button id="republicar">
+        <button class="btn-republicar" onclick="republicar()">
             🔄 Republicar (<span id="shares">0</span>)
         </button>
 
-        <button id="compartilhar">
+        <button class="btn-compartilhar" onclick="compartilhar()">
             🔗 Compartilhar
         </button>
     </div>
@@ -202,21 +228,21 @@
     let likes = 0;
     let republicacoes = 0;
 
-    document.getElementById("curtir").addEventListener("click", function(){
+    function curtir() {
         likes++;
         document.getElementById("likes").textContent = likes;
-    });
+    }
 
-    document.getElementById("republicar").addEventListener("click", function(){
+    function republicar() {
         republicacoes++;
         document.getElementById("shares").textContent = republicacoes;
         alert("Obrigado por republicar este artigo sobre as abelhas! 🐝");
-    });
+    }
 
-    document.getElementById("compartilhar").addEventListener("click", function(){
+    function compartilhar() {
         navigator.clipboard.writeText(window.location.href);
         alert("Link do artigo copiado para a área de transferência! 🐝");
-    });
+    }
 </script>
 
 </body>
